@@ -1,0 +1,2 @@
+large-file.ext filter=lfs diff=lfs merge=lfs -text
+gipjazes-flowers-gallery.ext filter=lfs diff=lfs merge=lfs -text
