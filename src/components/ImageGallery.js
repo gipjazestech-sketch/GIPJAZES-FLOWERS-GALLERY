@@ -1,29 +1,9 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
 import OptimizedImage from './OptimizedImage'
 import './Gallery.css'
 
 export default function ImageGallery({ images = [] }) {
-    const [loadedImages, setLoadedImages] = useState(new Set())
-    const observerRef = useRef(null)
-
-    useEffect(() => {
-        observerRef.current = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const imageId = entry.target.dataset.imageId
-                        setLoadedImages((prev) => new Set([...prev, imageId]))
-                        observerRef.current?.unobserve(entry.target)
-                    }
-                })
-            },
-            { rootMargin: '250px', threshold: 0.01 }
-        )
-        return () => observerRef.current?.disconnect()
-    }, [])
-
     return (
         <div className="gallery-grid grid-cols-1 md-grid-cols-2 lg-grid-cols-3">
             {images.length === 0 ? (
@@ -36,8 +16,6 @@ export default function ImageGallery({ images = [] }) {
                         key={image.url || image.src || index}
                         image={image}
                         index={index}
-                        observerRef={observerRef}
-                        isLoaded={loadedImages.has(String(index))}
                     />
                 ))
             )}
@@ -45,59 +23,45 @@ export default function ImageGallery({ images = [] }) {
     )
 }
 
-function ImageCard({ image, index, observerRef, isLoaded }) {
-    const cardRef = useRef(null)
+function ImageCard({ image, index }) {
     const imageSrc = image.src || image.url
-
-    useEffect(() => {
-        const currentCard = cardRef.current
-        if (currentCard && observerRef.current && !isLoaded) {
-            observerRef.current.observe(currentCard)
-        }
-        return () => currentCard && observerRef.current && observerRef.current.unobserve(currentCard)
-    }, [observerRef, isLoaded])
 
     return (
         <div
-            ref={cardRef}
-            data-image-id={index}
             className="group relative flower-card rounded-lg overflow-hidden"
             style={{ aspectRatio: '4/5', minHeight: '350px' }}
         >
-            {isLoaded ? (
-                <>
-                    <OptimizedImage
-                        src={imageSrc}
-                        alt="Flower"
-                        fill={true}
-                        priority={index < 3}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                    <div className="card-overlay">
-                        <div className="w-full flex justify-between items-center">
-                            <div style={{ maxWidth: '70%' }}>
-                                <h3 className="text-sm font-medium text-white truncate">
-                                    {image.title ? image.title.split('/').pop() : 'Stunning Bloom'}
-                                </h3>
-                            </div>
-                            <a
-                                href={image.downloadUrl || imageSrc}
-                                download
-                                className="bg-white/20 hover:bg-white/40 backdrop-blur-xl p-3 rounded-full transition-all"
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                                    <polyline points="7 10 12 15 17 10" />
-                                    <line x1="12" y1="15" x2="12" y2="3" />
-                                </svg>
-                            </a>
-                        </div>
+            <OptimizedImage
+                src={imageSrc}
+                alt="Flower"
+                fill={true}
+                priority={index < 4} // Load first row immediately
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+
+            {/* Always visible on mobile, hover on desktop */}
+            <div className="card-overlay">
+                <div className="w-full flex justify-between items-center" style={{ pointerEvents: 'auto' }}>
+                    <div style={{ maxWidth: '70%' }}>
+                        <h3 className="text-sm font-medium text-white truncate">
+                            {image.title ? image.title.split('/').pop() : 'Stunning Bloom'}
+                        </h3>
                     </div>
-                </>
-            ) : (
-                <div className="w-full h-full shimmer-effect" />
-            )}
+                    <a
+                        href={image.downloadUrl || imageSrc}
+                        download
+                        style={{ zIndex: 10, position: 'relative' }}
+                        className="bg-white/20 hover:bg-white/40 backdrop-blur-xl p-3 rounded-full transition-all"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     )
 }
