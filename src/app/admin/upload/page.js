@@ -37,10 +37,11 @@ export default function UploadPage() {
                 // Reset file input
                 document.getElementById('fileInput').value = '';
             } else {
-                setStatus('Failed to upload.');
+                const data = await res.json();
+                setStatus(`Failed: ${data.details || 'Server error'}`);
             }
         } catch (err) {
-            setStatus('Error uploading.');
+            setStatus('Error: Network failure or CORS issue.');
         }
     };
 

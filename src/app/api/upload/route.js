@@ -1,6 +1,5 @@
+import { put } from '@vercel/blob';
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
 
 export async function POST(req) {
     try {
@@ -11,16 +10,17 @@ export async function POST(req) {
             return NextResponse.json({ error: 'No file uploaded' }, { status: 400 });
         }
 
-        const buffer = Buffer.from(await file.arrayBuffer());
-        // Safe filename
-        const safeName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_');
-        const filePath = path.join(process.cwd(), 'public/uploads', safeName);
+        // Upload to Vercel Blob
+        const blob = await put(file.name, file, {
+            access: 'public',
+        });
 
-        await fs.promises.writeFile(filePath, buffer);
-
-        return NextResponse.json({ success: true, fileName: safeName });
+        return NextResponse.json({ success: true, url: blob.url });
     } catch (e) {
-        console.error('Upload error:', e);
-        return NextResponse.json({ error: 'Upload failed' }, { status: 500 });
+        console.error('Upload error details:', e);
+        return NextResponse.json({
+            error: 'Upload failed',
+            details: e.message
+        }, { status: 500 });
     }
 }
