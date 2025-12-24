@@ -81,33 +81,6 @@
     text-transform: uppercase;
 }
 
-.btn-statement {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 16px 20px;
-    background: linear-gradient(135deg, #d946ef 0%, #8b5cf6 100%);
-    color: white;
-    font-weight: 800;
-    font-size: 0.75rem;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-    box-shadow: 0 10px 20px rgba(217, 70, 239, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.btn-statement:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(217, 70, 239, 0.5);
-    background: linear-gradient(135deg, #e879f9 0%, #a78bfa 100%);
-}
-
-.btn-statement:active {
-    transform: scale(0.98);
-}
-
 /* Image Transitions */
 .duration-1000 {
     transition: all 1000ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -140,20 +113,20 @@
 /* Flower Card Styling */
 .flower-card {
     background: #0a0a0a;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .flower-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(217, 70, 239, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
 }
 
 /* Shimmer Animation */
 .shimmer-effect {
-    background: linear-gradient(90deg, #111 25%, #222 50%, #111 75%);
+    background: linear-gradient(90deg, #050505 25%, #111 50%, #050505 75%);
     background-size: 200% 100%;
     animation: shimmer-swipe 2s infinite linear;
 }
@@ -175,9 +148,9 @@
     left: 0;
     right: 0;
     padding: 1.5rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 40%, transparent 100%);
     z-index: 10;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* Reveal on hover for desktop, always on for mobile */
@@ -197,13 +170,58 @@
     }
 }
 
+/* THE DESIGN STATEMENT BUTTON */
+.btn-statement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    /* Minimalist Glass */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: white;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    /* Spaced out for design feel */
+    border-radius: 4px;
+    /* Sharp, architectural corners */
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glowing design line */
+.btn-statement::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #d946ef;
+    transition: width 0.4s ease;
+    box-shadow: 0 0 10px #d946ef;
+}
+
+.btn-statement:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.3em;
+    /* Expands on hover like a design piece */
+    transform: translateY(-2px);
+}
+
+.btn-statement:hover::after {
+    width: 100%;
+}
+
 .truncate {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.backdrop-blur-xl {
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
 }
