@@ -65,6 +65,15 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      <footer style={{ marginTop: '100px', padding: '40px 0', borderTop: '1px solid rgba(255,255,255,0.05)', textAlign: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', marginBottom: '20px' }}>
+          <Link href="/about" style={{ color: '#fff', opacity: 0.4, textDecoration: 'none', fontSize: '0.8rem', letterSpacing: '2px' }}>ABOUT</Link>
+          <Link href="/privacy" style={{ color: '#fff', opacity: 0.4, textDecoration: 'none', fontSize: '0.8rem', letterSpacing: '2px' }}>PRIVACY</Link>
+          <a href="#" style={{ color: '#fff', opacity: 0.4, textDecoration: 'none', fontSize: '0.8rem', letterSpacing: '2px' }}>SUPPORT</a>
+        </div>
+        <p style={{ fontSize: '0.7rem', opacity: 0.2, letterSpacing: '1px' }}>© 2024 GIPJAZES GALLERY • ALL RIGHTS RESERVED</p>
+      </footer>
     </div>
   );
 }

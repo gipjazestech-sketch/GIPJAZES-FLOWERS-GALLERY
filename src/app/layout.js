@@ -1,5 +1,6 @@
 import './globals.css'
 import Background from '@/components/Background'
+import Script from 'next/script'
 
 export const metadata = {
   title: 'Gipjazes Flowers Gallery',
@@ -12,6 +13,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google AdSense - Manual Placeholder */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body style={{ margin: 0, color: 'white' }}>
         <Background />
         <main style={{ position: 'relative', zIndex: 1, minHeight: '100vh', overflowY: 'auto' }}>
