@@ -35,42 +35,25 @@ function ImageCard({ image, index }) {
                 src={imageSrc}
                 alt="Flower"
                 fill={true}
-                priority={index < 4} // Load first row immediately
+                priority={index < 4}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
 
-            <div className="card-overlay">
-                <div className="w-full flex flex-col gap-4">
-                    <div className="flex justify-between items-center" style={{ marginBottom: '4px' }}>
-                        <div className="flex flex-col">
-                            <h3 className="text-[10px] font-bold text-white/40 uppercase tracking-[0.3em]">
-                                Digital Asset
-                            </h3>
-                            <h4 className="text-sm font-bold text-white uppercase tracking-widest truncate" style={{ maxWidth: '150px' }}>
-                                {image.title ? image.title.split('/').pop().split('.')[0] : 'Bloom'}
-                            </h4>
-                        </div>
-                        <div className="flex flex-col items-end">
-                            <span className="text-[9px] font-black text-white/20 uppercase tracking-tighter">Verified</span>
-                            <span className="text-[10px] font-bold text-[#d946ef]">4D • 1080P</span>
-                        </div>
-                    </div>
-
-                    <a
-                        href={image.downloadUrl || imageSrc}
-                        download
-                        style={{ zIndex: 10, position: 'relative' }}
-                        className="btn-statement"
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                            <polyline points="7 10 12 15 17 10" />
-                            <line x1="12" y1="15" x2="12" y2="3" />
-                        </svg>
-                        <span>DOWNLOAD</span>
-                    </a>
-                </div>
+            <div className="card-overlay-permanent">
+                <a
+                    href={image.downloadUrl || imageSrc}
+                    download
+                    style={{ zIndex: 10, position: 'relative', width: '100%' }}
+                    className="btn-statement"
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>DOWNLOAD</span>
+                </a>
             </div>
         </div>
     )
