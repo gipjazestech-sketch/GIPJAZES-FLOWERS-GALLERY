@@ -5,7 +5,7 @@ export default function PrivacyPage() {
         <div style={{ padding: '80px 20px', maxWidth: '800px', margin: '0 auto', color: '#ccc', lineHeight: '1.8' }}>
             <header style={{ textAlign: 'center', marginBottom: '60px' }}>
                 <h1 style={{ fontSize: '3rem', color: '#fff', marginBottom: '20px' }}>Privacy Policy</h1>
-                <p style={{ opacity: 0.6 }}>Effective Date: December 24, 2024</p>
+                <p style={{ opacity: 0.6 }}>Effective Date: December 28, 2025</p>
             </header>
 
             <section style={{ marginBottom: '40px' }}>
@@ -37,7 +37,7 @@ export default function PrivacyPage() {
             <section style={{ marginBottom: '40px' }}>
                 <h2 style={{ color: '#fff', fontSize: '1.5rem', marginBottom: '15px' }}>4. Contact Us</h2>
                 <p>
-                    For any privacy-related inquiries, please contact us through our official Owener Portal or via email at support@gipjazes.art.
+                    For any privacy-related inquiries, please contact us through our official Owener Portal or via email at support@gipjazesflowersgallery.com.
                 </p>
             </section>
 

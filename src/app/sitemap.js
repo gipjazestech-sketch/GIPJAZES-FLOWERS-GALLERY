@@ -1,5 +1,5 @@
 export default function sitemap() {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://gipjazes-flowers-gallery.vercel.app'
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.gipjazesflowersgallery.com'
 
     const currentDate = new Date().toISOString()
 
@@ -10,6 +10,17 @@ export default function sitemap() {
             changeFrequency: 'daily',
             priority: 1,
         },
-        // Add more pages as needed
+        {
+            url: `${baseUrl}/about`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/privacy`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly',
+            priority: 0.5,
+        },
     ]
 }

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots() {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://gipjazes-flowers-gallery.vercel.app'
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.gipjazesflowersgallery.com'
 
     return {
         rules: {

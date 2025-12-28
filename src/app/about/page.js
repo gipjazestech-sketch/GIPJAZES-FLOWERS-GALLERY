@@ -25,7 +25,7 @@ export default function AboutPage() {
                 <div style={{ background: 'rgba(255,255,255,0.03)', padding: '40px', borderRadius: '30px', border: '1px solid rgba(255,255,255,0.05)' }}>
                     <h2 style={{ color: '#fff', marginBottom: '20px' }}>Contact Details</h2>
                     <ul style={{ listStyle: 'none', padding: 0, lineHeight: '2.5' }}>
-                        <li>📧 <span style={{ color: '#fff' }}>hello@gipjazes.art</span></li>
+                        <li>📧 <span style={{ color: '#fff' }}>hello@gipjazesflowersgallery.com</span></li>
                         <li>📍 <span style={{ color: '#fff' }}>Digital Studio, Global</span></li>
                         <li>📱 <span style={{ color: '#fff' }}>Official Support Portal</span></li>
                     </ul>
