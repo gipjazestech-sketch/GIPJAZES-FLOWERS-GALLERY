@@ -21,6 +21,7 @@ export default function Navbar() {
     const navLinks = [
         { name: 'Gallery', href: '/', icon: <Monitor size={18} /> },
         { name: 'Articles', href: '/articles', icon: <BookOpen size={18} /> },
+        { name: 'Tools', href: '/tools', icon: <Monitor size={18} /> },
         { name: 'Glossary', href: '/glossary', icon: <ShieldCheck size={18} /> },
         { name: 'About', href: '/about', icon: <Info size={18} /> },
         { name: 'Contact', href: '/contact', icon: <Mail size={18} /> },

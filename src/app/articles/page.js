@@ -5,6 +5,15 @@ import Link from 'next/link';
 export default function ArticlesPage() {
     const articles = [
         {
+            title: "Digital Marketing Mastery 2026",
+            summary: "Advanced strategies for semantic SEO, viral growth, and AI-driven content engines for the modern era.",
+            link: "/articles/digital-marketing-2026",
+            date: "Jan 2026",
+            tag: "Growth",
+            color: "#fbbf24",
+            readTime: "16 min"
+        },
+        {
             title: "AI-Powered Development: The 2026 Paradigm",
             summary: "Leveraging autonomous agents and LLMs to build high-performance software at 10x speed while maintaining expert quality.",
             link: "/articles/ai-development-guide",
@@ -49,15 +58,7 @@ export default function ArticlesPage() {
             color: "#3b82f6",
             readTime: "8 min"
         },
-        {
-            title: "Digital Marketing Mastery 2026",
-            summary: "Advanced strategies for semantic SEO, viral growth, and AI-driven content engines for the modern era.",
-            link: "/articles/digital-marketing-2026",
-            date: "Jan 2026",
-            tag: "Growth",
-            color: "#fbbf24",
-            readTime: "16 min"
-        },
+
         {
             title: "The Future of AI: Beyond Chatbots",
             summary: "Exploring how autonomous AI agents and multimodal models are reshaping the digital landscape in 2026.",

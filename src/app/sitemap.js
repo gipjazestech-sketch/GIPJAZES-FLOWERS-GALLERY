@@ -28,6 +28,12 @@ export default function sitemap() {
             changeFrequency: 'weekly',
             priority: 0.9,
         },
+        {
+            url: `${baseUrl}/tools`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
         // Articles
         {
             url: `${baseUrl}/articles/resolution-guide`,

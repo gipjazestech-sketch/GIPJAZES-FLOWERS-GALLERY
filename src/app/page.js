@@ -89,6 +89,53 @@ export default async function Home() {
         </div>
       </header>
 
+      {/* NEW Digital Marketing Section */}
+      <section style={{
+        marginBottom: '60px',
+        padding: '40px',
+        background: 'linear-gradient(135deg, rgba(251, 191, 36, 0.08), rgba(245, 158, 11, 0.08))',
+        borderRadius: '30px',
+        border: '1px solid rgba(255,255,255,0.1)',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
+            <span style={{ padding: '5px 12px', background: '#fbbf24', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 'bold', letterSpacing: '1px', color: '#000' }}>HOT TOPIC</span>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: '800' }}>Digital Marketing Mastery</h2>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', marginBottom: '30px' }}>
+            <div>
+              <p style={{ opacity: 0.8, lineHeight: '1.7', marginBottom: '20px' }}>
+                Learn how to build a massive online presence and monetize it in 2026. From SEO and social media growth to creating automated wealth engines.
+              </p>
+              <Link href="/articles/digital-marketing-2026" style={{
+                display: 'inline-block',
+                padding: '12px 25px',
+                background: '#fbbf24',
+                color: '#000',
+                textDecoration: 'none',
+                borderRadius: '12px',
+                fontWeight: 'bold',
+                transition: 'all 0.3s ease'
+              }} className="hover-scale">
+                Master Marketing →
+              </Link>
+            </div>
+            <div style={{ background: 'rgba(255,255,255,0.03)', padding: '20px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.05)' }}>
+              <h4 style={{ color: '#fbbf24', marginBottom: '10px' }}>Key Strategies:</h4>
+              <ul style={{ paddingLeft: '20px', opacity: 0.7, fontSize: '0.9rem', lineHeight: '1.8' }}>
+                <li>Semantic SEO & Voice Search</li>
+                <li>Viral Social Media Growth</li>
+                <li>Email Marketing & Retention</li>
+                <li>AI Content Engines</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* NEW Featured Comprehensive Guides Section */}
       <section style={{
         marginBottom: '60px',
@@ -274,52 +321,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* NEW Digital Marketing Section */}
-      <section style={{
-        marginBottom: '60px',
-        padding: '40px',
-        background: 'linear-gradient(135deg, rgba(251, 191, 36, 0.08), rgba(245, 158, 11, 0.08))',
-        borderRadius: '30px',
-        border: '1px solid rgba(255,255,255,0.1)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
-        <div style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
-            <span style={{ padding: '5px 12px', background: '#fbbf24', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 'bold', letterSpacing: '1px', color: '#000' }}>HOT TOPIC</span>
-            <h2 style={{ fontSize: '2.2rem', fontWeight: '800' }}>Digital Marketing Mastery</h2>
-          </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', marginBottom: '30px' }}>
-            <div>
-              <p style={{ opacity: 0.8, lineHeight: '1.7', marginBottom: '20px' }}>
-                Learn how to build a massive online presence and monetize it in 2026. From SEO and social media growth to creating automated wealth engines.
-              </p>
-              <Link href="/articles/digital-marketing-2026" style={{
-                display: 'inline-block',
-                padding: '12px 25px',
-                background: '#fbbf24',
-                color: '#000',
-                textDecoration: 'none',
-                borderRadius: '12px',
-                fontWeight: 'bold',
-                transition: 'all 0.3s ease'
-              }} className="hover-scale">
-                Master Marketing →
-              </Link>
-            </div>
-            <div style={{ background: 'rgba(255,255,255,0.03)', padding: '20px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.05)' }}>
-              <h4 style={{ color: '#fbbf24', marginBottom: '10px' }}>Key Strategies:</h4>
-              <ul style={{ paddingLeft: '20px', opacity: 0.7, fontSize: '0.9rem', lineHeight: '1.8' }}>
-                <li>Semantic SEO & Voice Search</li>
-                <li>Viral Social Media Growth</li>
-                <li>Email Marketing & Retention</li>
-                <li>AI Content Engines</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* NEW Future of AI Section */}
       <section style={{
