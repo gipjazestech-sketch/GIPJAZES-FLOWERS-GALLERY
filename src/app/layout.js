@@ -1,5 +1,7 @@
 import './globals.css'
 import Background from '@/components/Background'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 import Script from 'next/script'
 import { Outfit } from 'next/font/google'
 
@@ -10,8 +12,8 @@ const outfit = Outfit({
 
 export const metadata = {
   metadataBase: new URL('https://www.gipjazesflowersgallery.com'),
-  title: 'Gipjazes Wallpapers | Premium 4K HD Digital Gallery',
-  description: 'Download stunning 4K HD digital wallpapers for Android, iOS, and Desktop. High-resolution art collections optimized for every screen.',
+  title: 'Gipjazes Digital Hub | Premium Wallpapers & Technical Academy',
+  description: 'The Nexus of Digital Creative Tools and Advanced Technical Knowledge. 4K Wallpapers, Coding Guides, Cybersecurity Mastery, and Digital Marketing Insights.',
   alternates: {
     canonical: '/',
   },
@@ -118,8 +120,10 @@ export default function RootLayout({ children }) {
           data-ad-client="ca-pub-2198481548549346">
         </amp-auto-ads>
         <Background />
-        <main style={{ position: 'relative', zIndex: 1, minHeight: '100vh', overflowY: 'auto' }}>
+        <Navbar />
+        <main style={{ position: 'relative', zIndex: 1, minHeight: '100vh', overflowY: 'auto', paddingTop: '80px' }}>
           {children}
+          <Footer />
         </main>
       </body>
     </html>

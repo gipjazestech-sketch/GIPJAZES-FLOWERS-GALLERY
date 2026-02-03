@@ -71,6 +71,25 @@ export default function sitemap() {
             changeFrequency: 'monthly',
             priority: 0.7,
         },
+        {
+            url: `${baseUrl}/articles/future-of-ai-2026`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        // Support & Info
+        {
+            url: `${baseUrl}/glossary`,
+            lastModified: currentDate,
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/contact`,
+            lastModified: currentDate,
+            changeFrequency: 'yearly',
+            priority: 0.6,
+        },
         // Legal
         {
             url: `${baseUrl}/terms`,

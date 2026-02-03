@@ -63,24 +63,75 @@ export default async function Home() {
 
   return (
     <div style={{ padding: '40px', maxWidth: '1200px', margin: '0 auto' }}>
-      <header style={{ textAlign: 'center', marginBottom: '60px' }}>
-        <h1 className="animate-fade-in" style={{ fontSize: '4rem', marginBottom: '10px', background: 'linear-gradient(to bottom right, #fff, #3b82f6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-          Gipjazes Wallpapers
+      <header style={{ textAlign: 'center', marginBottom: '80px', position: 'relative' }}>
+        <h1 className="animate-fade-in" style={{ fontSize: '4.5rem', marginBottom: '15px', background: 'linear-gradient(to bottom right, #fff, #60a5fa, #d946ef)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: '900', letterSpacing: '-0.03em' }}>
+          Gipjazes Digital Hub
         </h1>
-        <p className="animate-fade-in" style={{ opacity: 0.8, fontSize: '1.4rem', fontWeight: 300, animationDelay: '0.2s', color: '#60a5fa' }}>
-          Premium 4K HD Digital Wallpaper Collection
+        <p className="animate-fade-in" style={{ opacity: 0.9, fontSize: '1.6rem', fontWeight: 300, animationDelay: '0.2s', color: '#60a5fa', marginBottom: '30px' }}>
+          The Nexus of Digital Creative Tools and Advanced Technical Knowledge
         </p>
-        <div className="animate-fade-in" style={{ maxWidth: '800px', margin: '20px auto', opacity: 0.7, lineHeight: '1.6', animationDelay: '0.3s' }}>
+        <div className="animate-fade-in" style={{ maxWidth: '900px', margin: '0 auto 40px', opacity: 0.8, lineHeight: '1.8', animationDelay: '0.3s', fontSize: '1.1rem' }}>
           <p>
-            Welcome to the ultimate destination for high-quality, exclusive wallpapers. Our collection features stunning 4D digital flora, vibrant landscapes, and contemporary abstract designs, all optimized for mobile devices, Android, and iOS. Whether you&apos;re looking for a fresh look for your smartphone or a high-resolution background for your desktop, Gipjazes provides the perfect aesthetic touch.
+            Welcome to <strong>Gipjazes Digital Hub</strong>, your premier destination for high-fidelity 4K wallpapers and deep technical education. Our platform bridges the gap between artistic expression and engineering excellence. Explore our curated gallery of neon-inspired digital art or dive into our academy for in-depth guides on full-stack development, cybersecurity, and digital marketing. Whether you are a creative professional seeking a fresh aesthetic or a developer looking to sharpen your edge, we provide the resources to fuel your digital journey.
           </p>
         </div>
 
-        <div style={{ marginTop: '30px', padding: '15px 30px', background: 'rgba(59, 130, 246, 0.1)', border: '1px solid rgba(59, 130, 246, 0.2)', borderRadius: '30px', display: 'inline-block' }}>
-          <p style={{ fontSize: '0.9rem', color: '#60a5fa' }}>✨ Free Unlimited Downloads • High Resolution • Mobile Optimized</p>
+        <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '40px' }}>
+          <div style={{ padding: '15px 30px', background: 'rgba(59, 130, 246, 0.1)', border: '1px solid rgba(59, 130, 246, 0.2)', borderRadius: '30px' }}>
+            <p style={{ fontSize: '0.95rem', color: '#60a5fa', margin: 0 }}>📊 <strong>20K+</strong> Active Learners</p>
+          </div>
+          <div style={{ padding: '15px 30px', background: 'rgba(217, 70, 239, 0.1)', border: '1px solid rgba(217, 70, 239, 0.2)', borderRadius: '30px' }}>
+            <p style={{ fontSize: '0.95rem', color: '#d946ef', margin: 0 }}>🎨 <strong>Premium</strong> 4K Assets</p>
+          </div>
+          <div style={{ padding: '15px 30px', background: 'rgba(74, 222, 128, 0.1)', border: '1px solid rgba(74, 222, 128, 0.2)', borderRadius: '30px' }}>
+            <p style={{ fontSize: '0.95rem', color: '#4ade80', margin: 0 }}>🔒 <strong>Verified</strong> Security Content</p>
+          </div>
         </div>
-
       </header>
+
+      {/* NEW Featured Comprehensive Guides Section */}
+      <section style={{
+        marginBottom: '60px',
+        padding: '40px',
+        background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(217, 70, 239, 0.08))',
+        borderRadius: '30px',
+        border: '1px solid rgba(255,255,255,0.1)',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <span style={{ padding: '8px 16px', background: '#3b82f6', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 'bold', letterSpacing: '1px', color: '#fff', marginBottom: '20px', display: 'inline-block' }}>FEATURED GUIDES</span>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '15px' }}>Comprehensive Knowledge Base</h2>
+            <p style={{ opacity: 0.8, fontSize: '1.1rem' }}>In-depth, professional guides covering everything you need to know</p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '25px' }}>
+            <Link href="/articles/complete-guide-to-4k-wallpapers" style={{ textDecoration: 'none', background: 'rgba(255,255,255,0.03)', padding: '30px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.08)', transition: 'all 0.3s ease' }} className="hover-scale">
+              <div style={{ fontSize: '0.75rem', color: '#3b82f6', marginBottom: '10px', fontWeight: 'bold' }}>2500+ WORDS • 15 MIN READ</div>
+              <h3 style={{ color: '#fff', fontSize: '1.4rem', marginBottom: '12px', fontWeight: '700' }}>Complete Guide to 4K Wallpapers</h3>
+              <p style={{ opacity: 0.7, lineHeight: '1.7', fontSize: '0.95rem' }}>
+                Everything about resolution, pixel density, aspect ratios, color psychology, and file formats. A comprehensive technical deep-dive.
+              </p>
+            </Link>
+
+            <Link href="/articles/digital-photography-mastery" style={{ textDecoration: 'none', background: 'rgba(255,255,255,0.03)', padding: '30px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.08)', transition: 'all 0.3s ease' }} className="hover-scale">
+              <div style={{ fontSize: '0.75rem', color: '#d946ef', marginBottom: '10px', fontWeight: 'bold' }}>3000+ WORDS • 18 MIN READ</div>
+              <h3 style={{ color: '#fff', fontSize: '1.4rem', marginBottom: '12px', fontWeight: '700' }}>Digital Photography Mastery</h3>
+              <p style={{ opacity: 0.7, lineHeight: '1.7', fontSize: '0.95rem' }}>
+                Master the exposure triangle, composition, lighting, and post-processing. From smartphone to professional camera.
+              </p>
+            </Link>
+
+            <Link href="/articles" style={{ textDecoration: 'none', background: 'rgba(255,255,255,0.03)', padding: '30px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.08)', transition: 'all 0.3s ease', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }} className="hover-scale">
+              <h3 style={{ color: '#4ade80', fontSize: '1.6rem', marginBottom: '12px', fontWeight: '700' }}>View All Articles →</h3>
+              <p style={{ opacity: 0.7, lineHeight: '1.7', fontSize: '0.95rem' }}>
+                Explore 10+ comprehensive guides on development, design, marketing, and more
+              </p>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* NEW Ultimate Coding Section at the very top */}
       <section style={{
@@ -270,6 +321,53 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* NEW Future of AI Section */}
+      <section style={{
+        marginBottom: '60px',
+        padding: '40px',
+        background: 'linear-gradient(135deg, rgba(251, 113, 133, 0.08), rgba(217, 70, 239, 0.08))',
+        borderRadius: '30px',
+        border: '1px solid rgba(255,255,255,0.1)',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
+            <span style={{ padding: '5px 12px', background: '#fb7185', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 'bold', letterSpacing: '1px', color: '#fff' }}>TRENDING</span>
+            <h2 style={{ fontSize: '2.2rem', fontWeight: '800' }}>The Future of AI</h2>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', marginBottom: '30px' }}>
+            <div>
+              <p style={{ opacity: 0.8, lineHeight: '1.7', marginBottom: '20px' }}>
+                Discover how autonomous AI agents and multimodal models are reshaping the digital landscape in 2026 and beyond.
+              </p>
+              <Link href="/articles/future-of-ai-2026" style={{
+                display: 'inline-block',
+                padding: '12px 25px',
+                background: '#fb7185',
+                color: '#fff',
+                textDecoration: 'none',
+                borderRadius: '12px',
+                fontWeight: 'bold',
+                transition: 'all 0.3s ease'
+              }} className="hover-scale">
+                Explore AI Future →
+              </Link>
+            </div>
+            <div style={{ background: 'rgba(255,255,255,0.03)', padding: '20px', borderRadius: '20px', border: '1px solid rgba(255,255,255,0.05)' }}>
+              <h4 style={{ color: '#fb7185', marginBottom: '10px' }}>Key Insights:</h4>
+              <ul style={{ paddingLeft: '20px', opacity: 0.7, fontSize: '0.9rem', lineHeight: '1.8' }}>
+                <li>Rise of Agentic AI</li>
+                <li>Multimodal Mastery</li>
+                <li>On-Device Intelligence</li>
+                <li>Ethical AI Frameworks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <GallerySection images={images} />
 
       <section style={{ marginTop: '80px', padding: '60px 40px', background: 'rgba(255,255,255,0.02)', borderRadius: '30px', border: '1px solid rgba(255,255,255,0.05)' }}>
@@ -324,40 +422,6 @@ export default async function Home() {
         </div>
       </section>
 
-      <footer style={{ marginTop: '100px', padding: '60px 0', borderTop: '1px solid rgba(255,255,255,0.05)', textAlign: 'center' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '40px', maxWidth: '800px', margin: '0 auto 40px', textAlign: 'left' }}>
-          <div>
-            <h4 style={{ fontSize: '0.9rem', color: '#fff', marginBottom: '20px', letterSpacing: '1px' }}>EXPLORE</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-              <Link href="/" style={{ color: '#fff', opacity: 0.4, textDecoration: 'none', fontSize: '0.85rem' }}>Collection</Link>
-              <Link href="/articles" style={{ color: '#fff', opacity: 0.4, textDecoration: 'none', fontSize: '0.85rem' }}>Articles</Link>
-            </div>
-          </div>
-          <div>
-            <h4 style={{ fontSize: '0.9rem', color: '#fff', marginBottom: '20px', letterSpacing: '1px' }}>SUPPORT</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-              <Link href="/faq" style={{ color: '#fff', opacity: 0.4, textDecoration: 'none', fontSize: '0.85rem' }}>FAQ</Link>
-              <a href="mailto:support@gipjazes.com" style={{ color: '#fff', opacity: 0.4, textDecoration: 'none', fontSize: '0.85rem' }}>Contact</a>
-            </div>
-          </div>
-          <div>
-            <h4 style={{ fontSize: '0.9rem', color: '#fff', marginBottom: '20px', letterSpacing: '1px' }}>LEGAL</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-              <Link href="/terms" style={{ color: '#fff', opacity: 0.4, textDecoration: 'none', fontSize: '0.85rem' }}>Terms & Licensing</Link>
-              <Link href="/privacy" style={{ color: '#fff', opacity: 0.4, textDecoration: 'none', fontSize: '0.85rem' }}>Privacy Policy</Link>
-            </div>
-          </div>
-          <div>
-            <h4 style={{ fontSize: '0.9rem', color: '#fff', marginBottom: '20px', letterSpacing: '1px' }}>COMPANY</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-              <Link href="/about" style={{ color: '#fff', opacity: 0.4, textDecoration: 'none', fontSize: '0.85rem' }}>About Us</Link>
-            </div>
-          </div>
-        </div>
-        <p style={{ fontSize: '0.75rem', opacity: 0.2, letterSpacing: '1px', borderTop: '1px solid rgba(255,255,255,0.03)', paddingTop: '40px' }}>
-          © 2026 GIPJAZES WALLPAPERS • THE ULTIMATE DIGITAL GALLERY • CRAFTED WITH PASSION
-        </p>
-      </footer>
     </div>
   );
 }

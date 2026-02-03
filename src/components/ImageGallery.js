@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import OptimizedImage from './OptimizedImage'
 import LiveWallpaper from './LiveWallpaper'
 import { Share2 } from 'lucide-react'

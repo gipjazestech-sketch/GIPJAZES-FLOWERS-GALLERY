@@ -79,11 +79,7 @@ export default function AboutPage() {
                 </section>
             </div>
 
-            <footer style={{ marginTop: '80px', textAlign: 'center' }}>
-                <Link href="/" style={{ color: '#3b82f6', textDecoration: 'none', fontWeight: 'bold', fontSize: '1.1rem' }}>
-                    ← Back to the Collection
-                </Link>
-            </footer>
+
         </div>
     );
 }

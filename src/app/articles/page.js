@@ -5,36 +5,85 @@ import Link from 'next/link';
 export default function ArticlesPage() {
     const articles = [
         {
-            title: "The 2026 Web Developer Roadmap",
-            summary: "A high-octane, 4-week intensive guide to mastering Next.js, React, and modern engineering standards.",
+            title: "Complete Guide to 4K Wallpapers: Everything You Need to Know",
+            summary: "An exhaustive 2500+ word guide covering resolution, pixel density, aspect ratios, color psychology, file formats, and practical tips for choosing the perfect wallpaper for any device in 2026.",
+            link: "/articles/complete-guide-to-4k-wallpapers",
+            date: "Feb 3, 2026",
+            tag: "Featured Guide",
+            color: "#3b82f6",
+            readTime: "15 min"
+        },
+        {
+            title: "Digital Photography Mastery: From Smartphone to Professional Camera",
+            summary: "Master the exposure triangle, composition techniques, lighting principles, and post-processing workflows. A comprehensive 3000+ word guide for aspiring photographers in 2026.",
+            link: "/articles/digital-photography-mastery",
+            date: "Feb 3, 2026",
+            tag: "Photography",
+            color: "#d946ef",
+            readTime: "18 min"
+        },
+        {
+            title: "CSS Grid Mastery 2026",
+            summary: "Stop guessing. Master the most powerful layout system in web history with our advanced update on intrinsic layouts and subgrid.",
+            link: "/articles/complete-coding-guide",
+            date: "Feb 2026",
+            tag: "Engineering",
+            color: "#4ade80",
+            readTime: "12 min"
+        },
+        {
+            title: "AI-Powered Development: The 2026 Paradigm",
+            summary: "Leveraging autonomous agents and LLMs to build high-performance software at 10x speed while maintaining expert quality.",
+            link: "/articles/ai-development-guide",
+            date: "Feb 2026",
+            tag: "AI Future",
+            color: "#fb7185",
+            readTime: "14 min"
+        },
+        {
+            title: "The Ultimate Wallpaper Selection Guide",
+            summary: "A technical deep-dive into PPI, color theory, and aspect ratios to optimize your digital environment for peak performance.",
+            link: "/articles/resolution-guide",
+            date: "Feb 2026",
+            tag: "Utility",
+            color: "#3b82f6",
+            readTime: "8 min"
+        },
+        {
+            title: "Digital Marketing Mastery 2026",
+            summary: "Advanced strategies for semantic SEO, viral growth, and AI-driven content engines for the modern era.",
+            link: "/articles/digital-marketing-2026",
+            date: "Jan 2026",
+            tag: "Growth",
+            color: "#fbbf24",
+            readTime: "16 min"
+        },
+        {
+            title: "The Future of AI: Beyond Chatbots",
+            summary: "Exploring how autonomous AI agents and multimodal models are reshaping the digital landscape in 2026.",
+            link: "/articles/future-of-ai-2026",
+            date: "Jan 2026",
+            tag: "Trending",
+            color: "#d946ef",
+            readTime: "11 min"
+        },
+        {
+            title: "Roadmap: Become a Web Developer",
+            summary: "A high-octane intensive guide to mastering Next.js, React, and modern engineering standards in 4 weeks.",
             link: "/articles/how-to-become-a-web-developer",
             date: "Jan 2026",
             tag: "Roadmap",
-            color: "#60a5fa"
+            color: "#60a5fa",
+            readTime: "13 min"
         },
         {
-            title: "Mastering Modern UI/UX & Interactions",
+            title: "Mastering Modern UI/UX Architecture",
             summary: "Motion design, glassmorphism, and the psychology of premium interfaces. Why the best sites feel 'alive'.",
             link: "/articles/mastering-modern-ui-ux",
             date: "Jan 2026",
             tag: "Design",
-            color: "#d946ef"
-        },
-        {
-            title: "AI-Powered Development: The New Normal",
-            summary: "Leveraging LLMs and AI agents (like Antigravity) to build 10x faster while maintaining expert quality.",
-            link: "/articles/ai-development-guide",
-            date: "Jan 2026",
-            tag: "AI Expert",
-            color: "#fb7185"
-        },
-        {
-            title: "The Ultimate Coding: HTML to Python",
-            summary: "A massive, zero-to-hero guide covering HTML5, CSS3, JavaScript, and Python. Everything you need to know.",
-            link: "/articles/complete-coding-guide",
-            date: "Jan 2026",
-            tag: "Full Course",
-            color: "#4ade80"
+            color: "#d946ef",
+            readTime: "10 min"
         },
         {
             title: "Cybersecurity Mastery: Defense Protocol",
@@ -42,15 +91,8 @@ export default function ArticlesPage() {
             link: "/articles/cybersecurity-mastery",
             date: "Jan 2026",
             tag: "Security",
-            color: "#ef4444"
-        },
-        {
-            title: "Understanding Wallpaper Resolutions",
-            summary: "A technical guide to 4K, HD, and beyond. Learn how math defines digital quality.",
-            link: "/articles/resolution-guide",
-            date: "Jan 2026",
-            tag: "Technical",
-            color: "#3b82f6"
+            color: "#ef4444",
+            readTime: "15 min"
         }
     ];
 
@@ -112,12 +154,7 @@ export default function ArticlesPage() {
                 ))}
             </div>
 
-            <footer style={{ marginTop: '120px', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '60px' }}>
-                <p style={{ opacity: 0.4, marginBottom: '20px' }}>© 2026 Gipjazes Academy. All rights reserved.</p>
-                <Link href="/" style={{ color: '#3b82f6', textDecoration: 'none', fontWeight: 'bold' }}>
-                    Explore Wallpapers
-                </Link>
-            </footer>
+
         </div>
     );
 }
