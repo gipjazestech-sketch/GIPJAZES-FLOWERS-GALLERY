@@ -1,7 +1,12 @@
-'use client';
 
 import Link from 'next/link';
 import { Monitor, Smartphone, Palette, Crosshair, Zap, Layers } from 'lucide-react';
+
+export const metadata = {
+    title: 'Resolution Guide: Understanding 4K & PPI | Gipjazes Technical',
+    description: 'A deep dive into pixels, aspect ratios, and density. Learn how to choose the perfect wallpaper for your specific hardware.',
+    keywords: ['4K Resolution', 'PPI Calculator', 'Aspect Ratio', 'Display Technology', 'Wallpaper Guide']
+};
 
 export default function WallpaperGuide() {
     return (

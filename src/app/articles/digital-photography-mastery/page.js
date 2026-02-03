@@ -1,7 +1,12 @@
-'use client';
 
 import Link from 'next/link';
 import { Aperture, Sun, Palette, Image as ImageIcon } from 'lucide-react';
+
+export const metadata = {
+    title: 'Digital Photography Mastery: Technical Guide | Gipjazes Arts',
+    description: 'Master the exposure triangle, composition, and post-processing. A professional guide for photographers in 2026.',
+    keywords: ['Photography Basics', 'Exposure Triangle', 'Composition Rules', 'Digital Art', 'Camera Guide']
+};
 
 export default function PhotographyGuide() {
     return (

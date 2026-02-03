@@ -1,6 +1,11 @@
-'use client';
 
 import Link from 'next/link';
+
+export const metadata = {
+    title: 'Mastering Modern UI/UX: Motion & Glassmorphism | Gipjazes Design',
+    description: 'A deep dive into 2026 design trends. Learn how to use motion, depth, and glassmorphism to create interfaces that feel alive.',
+    keywords: ['UI/UX Design', 'Glassmorphism', 'Motion Design', 'Web Design Trends', 'User Experience']
+};
 
 export default function UIUXGuide() {
     return (

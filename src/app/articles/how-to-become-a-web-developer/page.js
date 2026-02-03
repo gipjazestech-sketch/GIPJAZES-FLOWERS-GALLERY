@@ -1,6 +1,11 @@
-'use client';
 
 import Link from 'next/link';
+
+export const metadata = {
+    title: 'Web Developer Roadmap 2026: Zero to Senior | Gipjazes Academy',
+    description: 'The definitive guide to becoming a full-stack developer in 2026. From HTML5 to Agentic AI workflows.',
+    keywords: ['Web Development', 'Coding Roadmap', 'Full Stack', 'Next.js', 'React Learning']
+};
 
 export default function WebDevGuide() {
     return (

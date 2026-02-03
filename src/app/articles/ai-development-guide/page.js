@@ -1,7 +1,12 @@
-'use client';
 
 import Link from 'next/link';
 import { Bot, Terminal, Code2, Sparkles, Brain, Workflow } from 'lucide-react';
+
+export const metadata = {
+    title: 'AI Development Guide 2026: Agentic Workflows | Gipjazes Academy',
+    description: 'How to transition from a coder to an AI Architect. Mastering RAG, Agentic AI, and prompt engineering.',
+    keywords: ['AI Development', 'Agentic AI', 'RAG', 'Prompt Engineering', 'Software Architecture']
+};
 
 export default function AIDevelopmentGuide() {
     return (

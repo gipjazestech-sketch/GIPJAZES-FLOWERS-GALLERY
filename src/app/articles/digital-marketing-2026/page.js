@@ -1,6 +1,11 @@
-'use client';
 
 import Link from 'next/link';
+
+export const metadata = {
+    title: 'Digital Marketing Mastery 2026: The Wealth Blueprint | Gipjazes Business',
+    description: 'Learn how to build a high-revenue digital empire using Semantic SEO, AI Content Engines, and localized social growth.',
+    keywords: ['Digital Marketing', 'SEO 2026', 'Social Media Growth', 'Content Strategy', 'Monetization']
+};
 
 export default function DigitalMarketingGuide() {
     return (

@@ -1,7 +1,12 @@
-'use client';
 
 import Link from 'next/link';
 import { Monitor, Smartphone, Download, Zap, Eye, Settings } from 'lucide-react';
+
+export const metadata = {
+    title: 'Complete Guide to 4K Wallpapers & Resolution | Gipjazes',
+    description: 'Everything you need to know about 4K, 8K, pixel density, and aspect ratios. Ensure your digital environment is pixel-perfect.',
+    keywords: ['4K Wallpapers', 'Resolution Guide', 'Monitor Specs', 'Pixel Density', 'Digital Art Formats']
+};
 
 export default function CompleteWallpaperGuide() {
     return (

@@ -1,7 +1,12 @@
-'use client';
 
 import Link from 'next/link';
 import { Layout, Code, Zap, Smartphone, Monitor, Cpu } from 'lucide-react';
+
+export const metadata = {
+    title: 'CSS Grid Mastery 2026: The Ultimate Layout Guide | Gipjazes Academy',
+    description: 'Master CSS Grid, Subgrid, and Intrinsic Layouts in 2026. A comprehensive guide for modern frontend developers.',
+    keywords: ['CSS Grid', 'Subgrid', 'Frontend Development', 'Web Design 2026', 'Responsive Layouts']
+};
 
 export default function CSSGridMastery() {
     return (
