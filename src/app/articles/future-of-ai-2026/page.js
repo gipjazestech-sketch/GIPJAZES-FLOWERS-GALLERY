@@ -1,4 +1,4 @@
-'use client';
+
 
 import Link from 'next/link';
 import { Bot, Brain, Workflow, Cpu, ShieldCheck, Briefcase, ChevronRight, AlertOctagon } from 'lucide-react';
