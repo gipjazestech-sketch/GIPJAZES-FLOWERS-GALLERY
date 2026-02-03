@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+    title: 'Privacy Policy & Cookie Usage | Gipjazes Wallpapers',
+    description: 'We respect your privacy. Learn how we handle cookies and data security.',
+};
+
 export default function PrivacyPage() {
     return (
         <div style={{ padding: '80px 20px', maxWidth: '800px', margin: '0 auto', color: '#ccc', lineHeight: '1.8' }}>

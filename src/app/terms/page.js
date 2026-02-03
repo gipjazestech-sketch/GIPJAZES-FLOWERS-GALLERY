@@ -1,5 +1,10 @@
 import Link from 'next/link';
 
+export const metadata = {
+    title: 'Terms of Use & Personal License | Gipjazes Wallpapers',
+    description: 'Read our terms of service and personal use license for downloading 4K wallpapers.',
+};
+
 export default function TermsPage() {
     return (
         <div style={{ padding: '80px 20px', maxWidth: '900px', margin: '0 auto', color: '#ccc', lineHeight: '1.8' }}>

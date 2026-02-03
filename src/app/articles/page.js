@@ -1,6 +1,11 @@
-'use client';
 
 import Link from 'next/link';
+
+export const metadata = {
+    title: 'Digital Insights & Academy | Gipjazes Knowledge Hub',
+    description: 'Explore our collection of expert guides on Web Development, AI, Cybersecurity, and Digital Art.',
+    keywords: ['Tech Blog', 'Coding Academy', 'AI News', 'Digital Art Hints']
+};
 
 export default function ArticlesPage() {
     const articles = [
